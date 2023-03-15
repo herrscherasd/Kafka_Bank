@@ -35,12 +35,13 @@ class SignUp(QWidget):
     def register(self):
         login = self.login.text()
         password = self.password.text()
-        email = self.email.text()
+        mail = self.mail.text()
         self.show_error()
         cursor = self.db.connect.cursor()
         try:
-            cursor.execute(f"INSERT INTO users VALUES ('{login}', '{password}', '{email}', '{time.ctime()}', 0);")
+            cursor.execute(f"INSERT INTO users VALUES ('{login}', '{password}', '{mail}', '{time.ctime()}', 0);")
             self.error.setText("Успешно")
+            self.close()
         except sqlite3.IntegrityError as s:
             print(s.args)
             if s.args == "('UNIQUE constraint failed: users.login',)":
@@ -145,6 +146,7 @@ class Bank(QMainWindow):
             self.error.setText("Ok")
             self.personal = Personal(login)
             self.personal.show()
+            self.close()
         else:
             self.show_error()
             self.error.setText("Неправильные данные")
