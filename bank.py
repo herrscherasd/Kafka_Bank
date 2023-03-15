@@ -9,9 +9,9 @@ class StartDB():
         self.connect = sqlite3.connect('bank.db')
         self.connect.execute("""
         CREATE TABLE IF NOT EXISTS users(
-        login VARCHAR(255) UNIQUE,
-        password VARCHAR(255),
-        mail VARCHAR(255) UNIQUE,
+        login VARCHAR(255) NOT NULL UNIQUE UNIQUE,
+        password VARCHAR(255) NOT NULL,
+        mail VARCHAR(255) NOT NULL UNIQUE UNIQUE,
         created VARCHAR(100), 
         balance INTEGER
         );
@@ -106,6 +106,17 @@ class Personal(QWidget):
                 print('OK')
             else:
                 print('Ne OK')
+        try:
+            cursor.execute(f"INSERT INTO users VALUES ('{login}', '{password}', '{mail}', '{time.ctime()}');")
+            self.error.setText("Успешно")
+        except sqlite3.IntegrityError as s:
+            print(s.args)
+            if s.args == "('UNIQUE constraint failed: users.login',)":
+                self.error.setText("Логин уже занят.")
+            elif s.args == ('UNIQUE constraint failed: users.mail',):
+                self.error.setText("Почта уже занята.")
+            else:
+                self.error.setText("Логин занят.")
         self.db.connect.commit()
 
 class Bank(QMainWindow):
