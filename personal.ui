@@ -163,7 +163,7 @@ border-radius:10px
     <set>Qt::AlignCenter</set>
    </property>
   </widget>
-  <widget class="QLineEdit" name="login">
+  <widget class="QLineEdit" name="input_login">
    <property name="geometry">
     <rect>
      <x>240</x>
