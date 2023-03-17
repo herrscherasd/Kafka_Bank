@@ -13,7 +13,12 @@ class StartDB:
             password VARCHAR(255) NOT NULL,
             email VARCHAR(255) NOT NULL UNIQUE,
             created VARCHAR(100),
-            balance INT
+            balance INT, 
+            communalka_water INTEGER
+            communalka_gas INTEGER
+            communalka_electricity INTEGER
+            communalka_internet INTEGER
+            communalka_trashnyak INTEGER
             );
         """)
         self.connect.commit()
@@ -150,6 +155,20 @@ class Bank(QMainWindow):
         else:
             self.show_error()
             self.error.setText("Неправильные данные")
+
+class Payment(QWidget):
+    def __init__(self):
+        super(Payment, self).__init__()
+        loadUi('payment.ui', self)
+        self.db = StartDB()
+        
+        self.personal = Personal()
+
+    def voda(self):
+        self
+        amount = self.com_amount.text()
+        cursor = self.db.connect.cursor()
+        cursor.execute(f"UPDATE users SET communalka_water = communalka_water - {amount} WHERE login = ")
 
 app = QApplication(sys.argv)
 bank = Bank()
