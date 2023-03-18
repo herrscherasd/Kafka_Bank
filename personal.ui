@@ -258,6 +258,175 @@ border-radius:10px
     <set>Qt::AlignCenter</set>
    </property>
   </widget>
+  <widget class="QLabel" name="result_2">
+   <property name="geometry">
+    <rect>
+     <x>240</x>
+     <y>180</y>
+     <width>311</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 63 13pt &quot;Yu Gothic UI Semibold&quot;;
+color:red;
+background-color:white;
+border-radius:10px
+</string>
+   </property>
+   <property name="text">
+    <string>Логин не рабочий</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="send_2">
+   <property name="geometry">
+    <rect>
+     <x>310</x>
+     <y>340</y>
+     <width>181</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 63 13pt &quot;Yu Gothic UI Semibold&quot;;
+color:red;
+background-color:white;
+border-radius:10px
+</string>
+   </property>
+   <property name="text">
+    <string>Перевести</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="amont">
+   <property name="geometry">
+    <rect>
+     <x>240</x>
+     <y>250</y>
+     <width>311</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 63 16pt &quot;Yu Gothic UI Semibold&quot;;
+color:white;
+background-color:red;
+border-radius:10px
+</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+   <property name="placeholderText">
+    <string>Сумма</string>
+   </property>
+   <property name="clearButtonEnabled">
+    <bool>false</bool>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="water">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>150</y>
+     <width>181</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 63 13pt &quot;Yu Gothic UI Semibold&quot;;
+color:red;
+background-color:white;
+border-radius:10px
+</string>
+   </property>
+   <property name="text">
+    <string>Вода</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="gas">
+   <property name="geometry">
+    <rect>
+     <x>440</x>
+     <y>220</y>
+     <width>181</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 63 13pt &quot;Yu Gothic UI Semibold&quot;;
+color:red;
+background-color:white;
+border-radius:10px
+</string>
+   </property>
+   <property name="text">
+    <string>Газ</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="internet">
+   <property name="geometry">
+    <rect>
+     <x>560</x>
+     <y>150</y>
+     <width>181</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 63 13pt &quot;Yu Gothic UI Semibold&quot;;
+color:red;
+background-color:white;
+border-radius:10px
+</string>
+   </property>
+   <property name="text">
+    <string>Интернет</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="trashnyak">
+   <property name="geometry">
+    <rect>
+     <x>170</x>
+     <y>220</y>
+     <width>181</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 63 13pt &quot;Yu Gothic UI Semibold&quot;;
+color:red;
+background-color:white;
+border-radius:10px
+</string>
+   </property>
+   <property name="text">
+    <string>Вывоз мусора</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="electricity">
+   <property name="geometry">
+    <rect>
+     <x>300</x>
+     <y>150</y>
+     <width>181</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 63 13pt &quot;Yu Gothic UI Semibold&quot;;
+color:red;
+background-color:white;
+border-radius:10px
+</string>
+   </property>
+   <property name="text">
+    <string>Электричество</string>
+   </property>
+  </widget>
  </widget>
  <resources/>
  <connections/>
