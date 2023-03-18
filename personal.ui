@@ -301,7 +301,7 @@ border-radius:10px
     <string>Перевести</string>
    </property>
   </widget>
-  <widget class="QLineEdit" name="amont">
+  <widget class="QLineEdit" name="amount_2">
    <property name="geometry">
     <rect>
      <x>240</x>

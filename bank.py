@@ -129,6 +129,8 @@ class Personal(QWidget):
         self.update_balance()
 
     def user_transfer(self):
+        self.hide_payment_buttons()
+        self.hide_payment()
         self.show_transfer()
         self.result.hide()
         input_login = self.input_login.text()
@@ -155,13 +157,14 @@ class Personal(QWidget):
             self.result.setText("Такого нет.")
 
     def payment_1(self):
+        self.hide_transfer()
         self.show_payment_buttons()
         self.hide_buttons()
         self.water.clicked.connect(self.waters)
-        self.send_2.clicked.connect(self.waters)
         self.internet.clicked.connect(self.internets)
         self.gas.clicked.connect(self.gass)
         self.trashnyak.clicked.connect(self.trashs)
+        self.electricity.clicked.connect(self.electro)
         
     def waters(self):
         self.show_payment()
